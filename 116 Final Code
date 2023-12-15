@@ -1,0 +1,179 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <windows.h>
+#include <cstdlib>
+using namespace std;
+
+class Character {
+public:
+    string name;
+    int health;
+    string music;
+}; // Add a semicolon to end the class declaration
+
+
+class Opponent {
+public:
+    string name;
+    int health;
+    string music;
+    int power;
+}; // Add a semicolon to end the class declaration
+
+
+class Move {
+public:
+    int damage;
+    string moveName;
+    string moveType;
+    float effectiveness;
+}; // Add a semicolon to end the class declaration
+
+
+int main() {
+    Character player;
+    int choice(0);
+
+
+    cout << "The year is 2085, people only listen to mumble rap, hip hop and AI generated music. \n"
+            "Apple has bought every record label and every government and is the only legal distributor of music. "
+            "It is illegal to listen to good music. \n"
+            "Good music (metal, MF Doom, Kanye West), is only distributed off the charts, through cassette tapes, by thugs and walkers."
+         << endl
+         << endl;
+
+
+    system("PAUSE");
+
+
+    cout << "You are part of a rebellion, known as the MF-Doomers (Metal Fucking Doomers). "
+            "You are trying to infiltrate the Apple Music Headquarters, where they hold all the rights to unreleased good music. "
+            "They also kidnapped your friends' hot goth sister, and you have to go save her, before they show her too much mumble rap and her brain rots. [She is in dying conditions and needs to listen to Cannibal Corpse immediately.] "
+            "You get to play as an MC, who loves all music but is scrawny, and has 300 HP. Or you get to play as Brennan, who listens to true rap and wants to bring it back, and has 800 HP, but cannot listen to metal. Or you get to play as Stel, who is the metal guy and can decimate mumble rappers but is very weak to Swifties (gets canceled)."
+         << endl
+         << endl;
+
+
+    system("PAUSE");
+
+
+    cout << "Select your character: \n1. Brennan \n2. Stel \n3. MC" << endl
+         << endl;
+
+
+    cin >> choice;
+
+
+    Move basic;
+    Move special;
+
+
+    switch (choice) {
+    case 1:
+        player.name = "Brennan";
+        player.health = 800;
+        player.music = "True Rap";
+
+
+        basic.moveName = "Tackle";
+        basic.moveType = "All";
+        basic.damage = 100;
+
+
+        special.moveName = "Freestyle";
+        special.moveType = "True Rap";
+        special.damage = 150;
+
+
+        system("cls");
+        cout << "Brennan: I'm ready to kick some Swiftie ass!\n" << endl;
+        Sleep(2000);
+        cout << "Michael: You know Taylor Swifts music isnt half bad-\n";
+        Sleep(1000);
+        cout << "Stel and Brennan: Shut up nerd.\n";
+        Sleep(5000);
+        cout << "Michael: Fine lets just go.";
+        break;
+
+
+    case 2:
+        player.name = "Stel";
+        player.health = 666;
+        player.music = "Metal";
+       
+        basic.moveName = "Low-Kick";
+        basic.moveType = "All";
+        basic.damage = 100;
+       
+        special.moveName = "Shred";
+        special.moveType = "Metal";
+        special.damage = 175;
+
+
+        system("cls");
+        cout << "Stel: May metal reign as it once did, and may we succeed in our mission." << endl;
+        Sleep(3500);
+        cout << "Brennan: Metal this, metal that, how about you focus on saving Michael’s sister and all of our ears from plaguing music." << endl;
+        Sleep(5000);
+        cout << "Stel: ... For once can you shut up you fat malak-" << endl;
+        Sleep(4500);
+        cout << "Michael: Guys, guys!!! Stop acting 12, we must go." << endl;
+        Sleep(7000);
+        break;
+
+
+    case 3:
+        player.name = "Michael";
+        player.health = 400;
+        player.music = "All";
+       
+        basic.moveName = "Superman Punch";
+        basic.moveType = "All";
+        basic.damage = 150;
+       
+        special.moveName = "Amps";
+        special.moveType = "All";
+        special.damage = 250;
+
+
+        system("cls");
+        cout << "Michael: Guys... this is a suicide mission.\n";
+        Sleep(2000);
+        cout << "Michael: As much as I love my sister I do not think breaking in like this is worth it.\n";
+        Sleep(5000);
+        cout << "Stel: This is not just about your sister, this is about the future of mankind.\n";
+        Sleep(3500);
+        cout << "Stel: We have prepared for this, and now it is time to go.\n";
+        Sleep(3000);
+        cout << "Stel: BRENNAN! No more Kanye East, we gotta go." << endl;
+        Sleep(3000);
+        cout << "Brennan: ;[";
+        Sleep(3000);
+        break;
+
+
+    default:
+        cin.clear();
+        cerr << "Invalid entry.";
+        break;
+    }
+
+
+    cout << "You arrive at Apple Music Headquarters, and are about to enter...  \nbut Wait! There is a guard!" << endl;
+
+
+    Opponent guard;
+
+
+    guard.name = "Apple Guard"; // Use quotes for the string
+    guard.health = 300;
+    guard.music = "AI Generated";
+    guard.power = 2;
+    // guard.moveName = "Sound Buffer"; // Uncomment if you want to use this
+
+
+    return 0;
+}
+
+//I pledge my honor I have abided by the Stevens Honor System .//
